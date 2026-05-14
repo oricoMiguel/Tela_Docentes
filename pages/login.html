@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <title>Login - UNISENAI</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="background-container">
+        <main class="login-card">
+            <div class="logo">
+                <img src="../assets/logo.png" alt="Logo UNISENAI">
+            </div>
+            
+            <h1>Controle de Horas</h1>
+            <p>Acesse sua conta para registrar suas horas.</p>
+
+           <form id="loginForm">
+                <div class="input-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                </div>
+
+                <button type="submit" class="btn-acessar">Acessar</button>
+            </form>
+        </main>
+    </div>
+<script>
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 100 },
+            color: { value: "#ffffff" },
+            shape: { type: "circle" },
+            opacity: { value: 0.3 },
+            size: { value: 3 },
+            line_linked: { enable: true, distance: 140, color: "#ffffff", opacity: 0.2 },
+            move: { enable: true, speed: 1.5 }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: { enable: true, mode: "repulse" },
+                onclick: { enable: true, mode: "push" }
+        },
+            modes: {
+                repulse: { distance: 100 },
+                push: { particles_nb: 4 }
+        }
+        } 
+    });
+</script>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        window.location.href = 'menu_incial.html';
+       
+    });
+</script>
+</body>
+</html>
