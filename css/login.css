@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --font-primary: 'Instrument Sans', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    font-family: var(--font-primary);
+}
+
+body{
+    background: linear-gradient(135deg, #E60000 0%, #E60000 50%, #F04D5A 80%, #FFFFFF 100%);
+    min-height: 100vh;
+}
+
+/* Particles */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.background-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+    padding: 20px;
+}
+
+.login-card {
+    pointer-events: all;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 14px;
+    color: #000000;  
+    margin-bottom: 25px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    padding-left: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #e8eaed;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.input-wrapper {
+    position: relative;
+    border-radius: 15px;
+    background-color: #f0f2f5;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.15), 0 0 8px rgba(255,87,34,0.2);
+    overflow: hidden;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+input:focus {
+    box-shadow:inset 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.button-wrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-acessar {
+    width: 100%;
+    padding: 12px;
+    background-color: #F04D5A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.btn-acessar:hover {
+    background-color: #E60000;
+}
+
+.btn-acessar a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo img{
+    width: 220px;
+    height: auto;
+}
+
+/* Para telas menores que 480px (Celulares) */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 20px; /* Diminui o padding interno */
+        border-radius: 15px; /* Arredonda um pouco mais para um look mobile moderno */
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .input-group input {
+        padding: 12px 15px; /* Inputs levemente menores */
+        font-size: 14px;
+    }
+}
