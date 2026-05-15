@@ -1,0 +1,222 @@
+:root {
+  --primary-red: #ff3131;
+  --primary-red-light: rgba(255, 49, 49, 0.08); /* Fundo suave para o item ativo */
+  --sidebar-bg: #f8f9fa; /* Mudado para um cinza bem claro/limpo */
+  --sidebar-width: 240px; /* Um pouquinho mais larga para respirar melhor */
+  --sidebar-mobile-width: 70px;
+  --text-dark: #333333;
+  --text-muted: #6c757d;
+}
+
+/* Reset de Box-sizing para evitar quebras de layout */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  display: flex;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa; /* Fundo do app ligeiramente diferente da sidebar */
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--sidebar-bg);
+  padding: 25px 0; /* Removido o padding lateral para a borda ativa encostar no canto */
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Trava ela no canto */
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  border-right: 1px solid #e0e0e0; /* Borda fina para separar do conteúdo */
+  transition: width 0.3s ease;
+}
+/* ==================== AJUSTE DE ALINHAMENTO DO TOPO ==================== */
+/* DEPOIS */
+.topo-sidebar { 
+  display: flex; 
+  flex-direction: column;  /* ← volta para coluna */
+  align-items: flex-start; 
+  padding: 10px 16px;
+  gap: 4px;  /* ← pouco espaço entre elas */
+}
+
+.logo-controle-horas {
+   width: 170px;  /* ← menor */
+  height: auto;
+  display: block;
+}
+
+/* Linha divisória logo abaixo das logos */
+.linha { 
+  border: none; 
+  border-top: 1px solid #e0e0e0; 
+  margin: 15px 0 20px 0; /* Diminuí um pouco a margem para não ficar muito longe */
+}
+
+/* Ajuste para o Modo Mobile (Garante que as duas fiquem legíveis ou sumam bem) */
+@media (max-width: 768px) {
+  .topo-sidebar { 
+    padding: 0 5px; 
+    align-items: center; 
+    gap: 5px;
+  }
+  .logo-unisenai { width: 45px; }
+  .logo-controle-horas { width: 50px; } /* Ou se preferir ocultar uma delas no mobile, use display: none; */
+}
+
+.menu { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 4px; 
+}
+
+/* Links da Sidebar customizados */
+.menu a {
+  text-decoration: none;
+  color: var(--text-dark);
+  padding: 12px 20px 12px 16px; /* Ajuste para compensar a borda esquerda */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-left: 4px solid transparent; /* Reserva o espaço da barra lateral ativa */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efeito Hover (Passar o mouse) */
+.menu a:hover { 
+  background-color: #f1f3f5; 
+  color: #000;
+  padding-left: 20px; /* Sutil movimento para a direita */
+}
+
+/* Estado Ativo (Onde a mágica acontece) */
+.menu a.active { 
+  background-color: var(--primary-red-light); 
+  color: var(--primary-red); 
+  font-weight: 600;
+  border-left: 4px solid var(--primary-red); /* Barrinha vermelha no canto esquerdo */
+}
+
+/* Botão Sair */
+.sair { 
+  margin-top: auto; 
+  padding: 0 20px; 
+}
+.sair a { 
+  text-decoration: none; 
+  color: var(--text-muted); 
+  font-size: 14px; 
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.2s;
+}
+.sair a:hover {
+  color: var(--primary-red); /* Fica vermelho ao passar o mouse indicando a saída */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sidebar { width: var(--sidebar-mobile-width); padding: 20px 0; }
+  .topo-sidebar { padding: 0 10px; align-items: center; }
+  .menu a { 
+    font-size: 0; 
+    justify-content: center; 
+    padding: 12px 0;
+    border-left: 3px solid transparent;
+  }
+  .menu a:hover { padding-left: 0; }
+  .menu a.active { border-left-width: 3px; }
+  .menu a .icon { font-size: 20px; }
+  .logo-img { width: 45px; }
+  .sair { padding: 0; display: flex; justify-content: center; }
+  .sair a { font-size: 0; }
+}
+
+/* AJUSTE DE LAYOUT: Ocupa o restante da tela */
+.header-container, 
+.content {
+    margin-left: var(--sidebar-width); 
+    width: calc(100% - var(--sidebar-width)); 
+    padding: 30px 40px; 
+    box-sizing: border-box; 
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .header-container, .content {
+    margin-left: var(--sidebar-mobile-width);
+    width: calc(100% - var(--sidebar-mobile-width));
+  }
+}
+
+/* Deixa os boxes (Filtro e Tabela) ocuparem 100% da largura do container */
+.filter-box, 
+.table-wrapper {
+    width: 100%; 
+    max-width: none; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02); /* Sombra bem leve para dar relevo */
+}
+
+/* Faz a tabela esticar totalmente */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Ajuste nos inputs para ficarem proporcionais */
+.search-wide {
+    flex: 3; 
+}
+
+/* ==================== ESTILO FINAL: TOTALMENTE LIMPO ==================== */
+
+.menu { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+  padding: 0 15px; 
+}
+
+/* Estado Padrão dos Links (Em repouso: fundo transparente/branco) */
+.menu a {
+  text-decoration: none;
+  color: #444; /* Cor cinza padrão para os itens */
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: transparent; /* Remove qualquer fundo */
+  border-left: none; /* Remove a bordinha vermelha da esquerda */
+  transition: all 0.25s ease-in-out;
+}
+
+/* Estado Ativo (Apenas a página atual fica com o texto em destaque) */
+.menu a.active { 
+  color: var(--primary-red); /* Texto vermelho para indicar a página ativa */
+  font-weight: 600;
+  background-color: transparent; /* Garante fundo limpo */
+  border-left: none; /* Garante nenhuma borda */
+}
+
+/* Hover: Transforma o botão no bloco vermelho com brilho só quando passa o mouse */
+.menu a:hover { 
+  background-color: var(--primary-red); 
+  color: white !important; 
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 49, 49, 0.4); 
+  transform: translateY(-1px); 
+}
