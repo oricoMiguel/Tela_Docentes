@@ -1,0 +1,228 @@
+.main-title {
+    color: var(--primary-red);
+    font-size: 2.2rem;
+    margin: 50px;
+}
+
+/* Botão Novo */
+.btn-novo {
+    height: 42px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.btn-novo:hover {
+    background-color: #45a049;
+    transform: translateY(-1px);
+}
+
+
+/* Botões de ação tabela */
+.btn-editar,
+.btn-del {
+    vertical-align: middle;
+    gap: 6px;
+    padding: 6px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.93em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botão Editar */
+.btn-editar {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.btn-editar:hover {
+    background-color: #c8e6c9;
+    color: #1b5e20;
+    transform: translateY(-1px);
+}
+
+/* Botão Deletar */
+.btn-del {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.btn-del:hover {
+    background-color: #ffcdd2;
+    color: #b71c1c;
+    transform: translateY(-1px);
+}
+
+/* Ícones botão */
+.btn-editar i, .btn-del i {
+    font-size: 1.2em;
+    vertical-align: bottom;
+}   
+
+
+/* tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 12px 10px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+td {
+    padding: 13px 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.empty-row td {
+    height: 40px;
+}
+
+/* Linha preta em baixo do cabeçalho */
+.Cabecalho {
+    border-bottom: 2px solid black;
+}
+
+.dadosTabela td:nth-child(4) {
+    color: var(--primary-red);
+    font-weight: bold;
+}   
+
+/* Filtro */
+.section-container {
+    margin-top: 5%;
+}
+
+.filter-box, .table-wrapper {
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.filter-box{
+    display: flex;
+    align-items: end;
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    flex-wrap: wrap;
+    place-content: space-evenly;
+    border: none !important;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label{
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Selects */
+.input-group select{
+    width: 360px;
+    height: 42px;
+    border: none;
+    outline: none;
+    background: #dcdcdc;
+    border-radius: 8px;
+    padding: 0 14px;
+    font-size: 14px;
+    color: #444;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Efeito foco */
+.input-group select:focus{
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Botão pesquisar */
+.btn-pesquisar{
+    height: 42px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary-red);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s;
+}
+
+.btn-pesquisar:hover{
+    background: #c52222;
+    transform: translateY(-1px);
+}
+
+
+/* Botão atribuir horas */
+.btn-atribuir{
+    height: 42px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary-red);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s;
+}
+
+.btn-atribuir:hover{
+    background: #c52222;
+    transform: translateY(-1px);
+}
+
+/* Input */
+.input-group input{
+    width: 360px;
+    height: 42px;
+    border: none;
+    outline: none;
+    background: #dcdcdc;
+    border-radius: 8px;
+    padding: 0 14px;
+    font-size: 14px;
+    color: #444;
+    transition: 0.2s;
+}
+
+/* Focus do input */
+.input-group input:focus{
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Placeholder */
+.input-group input::placeholder{
+    color: #666;
+}

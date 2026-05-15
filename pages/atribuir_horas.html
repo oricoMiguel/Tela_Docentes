@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atribuir horas - UniSENAI</title>
+    <link rel="stylesheet" href="../css/cadastro_horas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/side-bar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">   
+</head>
+<body>
+    <div id="sidebar-container"></div>
+    
+    <main class="content">
+        <div id="toast-container" class="toast-hidden"></div>
+        <h1 class="main-title">Atribuir horas</h1>
+
+        <section class="section-container">
+            <div class="filter-box">
+
+                <!-- Dropdown Projeto -->
+                <div class="input-group">
+                    <label>Projeto</label>
+                    <select id="projectSelect">
+                        <option value="">Selecione o projeto</option>
+                        <option value="ControleHoras">Controle de Horas</option>
+                        <option value="ProjetoDoar">Projeto Doar</option>
+                    </select>
+                </div>
+
+                <!-- Input aluno -->
+                <div class="input-group">
+                    <label>Aluno(a)</label>
+                    <input type="text" id="alunoInput" placeholder="Digite o nome do aluno">
+                </div>
+
+                <button class="btn-atribuir" id="btnAtribuir">Atribuir</button>
+            </div>
+        </section>
+
+    </main>   
+
+    <script src="../js/sidebar.js"></script>
+</body>
+</html>

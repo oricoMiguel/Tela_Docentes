@@ -23,18 +23,17 @@ body {
 }
 
 .btn-voltar {
-    color: var(--primary-red); /* A cor vermelha que você já definiu */
-    text-decoration: none;     /* Remove o sublinhado padrão fino do navegador */
+    color: var(--primary-red);
+    text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
     
-    /* Aqui está o segredo da linhazinha: */
     border-bottom: 2px solid var(--primary-red); 
-    padding-bottom: 2px;       /* Afasta um pouquinho a linha do texto */
+    padding-bottom: 2px;
     
-    display: inline-flex;      /* Ajuda a alinhar o ícone e o texto perfeitamente */
+    display: inline-flex;
     align-items: center;
-    gap: 8px;                  /* Espaço entre a seta e a palavra Voltar */
+    gap: 8px;
 }
 
 .logo {
