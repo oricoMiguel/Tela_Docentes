@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Projeto - UniSENAI</title>
+    <link rel="stylesheet" href="../css/tela_cadastro2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/side-bar.css">
+</head>
+<body>
+     <div id="sidebar-container"></div>
+
+    <div class="container-cadastro">
+        <header>
+            <a href="#" class="btn-voltar">← Voltar</a>
+        </header>
+
+        <main>
+            <h1>Cadastro de Projeto</h1>
+
+            <form>
+                <div class="input-group">
+                    <label for="curso">Curso:</label>
+                    <select id="curso">
+                        <option>Selecione o curso</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="projeto">Projeto:</label>
+                    <input type="text" id="projeto" placeholder="Ex.: Projeto Doar">
+                </div>
+
+                <div class="input-group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" placeholder="Ex: Este projeto tem como objetivo..."></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="horas">Horas:</label>
+                    <input type="number" id="horas" placeholder="Ex.: 50 h">
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn-salvar">Salvar</button>
+                    <button type="reset" class="btn-limpar">Limpar</button>
+                </div>
+            </form>
+        </main>
+    </div>
+        <script src="../js/sidebar.js"></script>
+</body>
+</html>
