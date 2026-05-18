@@ -1,0 +1,159 @@
+:root {
+  --primary: #FF8800;
+  --bg: #f2f2f2;
+  --gray: #d9d9d9;
+  --text: #222;
+  --validado: #6DB500;
+  --danger: #ff1d1d;
+  --font: 'Instrument Sans', sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background-color: var(--bg);
+  font-family: var(--font);
+  color: var(--text);
+}
+
+/* título */
+
+h1{
+  color: var(--primary);
+  font-size: 28px;
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
+
+/* container principal */
+.container {
+  margin-top: 80px;
+  margin-left: 220px;
+  padding: 40px 50px;
+  min-height: calc(100vh - 80px);
+}
+
+/* layout principal */
+.conteudo {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* lado esquerdo */
+.lado-esquerdo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.grid-infos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 20px;
+}
+
+.bloco h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.bloco p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* botões*/
+.acoes {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-validar,
+.btn-negar {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-validar {
+  background-color: #00CC44; 
+}
+
+.btn-negar {
+  background-color: #FF0000; 
+}
+
+.btn-validar:hover, .btn-negar:hover {
+  opacity: 0.9;
+}
+
+/* lado direito */
+.lado-direito {
+  width: 50%;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.secao h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+/* comprovante */
+.comprovante {
+  width: 260px;
+  height: 260px;
+  background-color: #d9d9d9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.comprovante img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* caixas de texto */
+.secao-textos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.caixa-texto {
+  width: 100%;
+  height: 115px; 
+  background-color: #e0e0e0;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+  border: none;
+  resize: none;
+}
+
+.comentario {
+  color: #666;
+}

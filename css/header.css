@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #FF8800;
+  --bg: #f2f2f2;
+  --gray: #d9d9d9;
+  --text: #222;
+  --validado: #6DB500;
+  --font: 'Instrument Sans', sans-serif;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 220px; /* respeita a sidebar */
+  width: calc(100% - 220px);
+  height: 80px;
+ background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-bottom: 1px solid #ddd;
+  z-index: 999;
+}
+
+/* BOTÃO VOLTAR */
+.btn-voltar {
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* PERFIL */
+.user-area {
+  display: flex;
+  align-items: center;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* FOTO */
+.profile-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary);
+}
+
+.profile-container span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.profile-role {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  margin-top: 2px;
+}
+
+.login-icon {
+  color: var(--primary);
+  font-size: 32px;
+}
