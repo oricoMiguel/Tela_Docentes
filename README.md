@@ -30,7 +30,7 @@ O front-end foi concluído, incluindo a interface do dashboard e a apresentaçã
 
 ## Tecnologias utilizadas
 
-*Adicionar aqui as linguagens, bibliotecas e ferramentas realmente utilizadas.*
+*Java,CSS e JavaScript.*
 
 ## Aprendizados
 
